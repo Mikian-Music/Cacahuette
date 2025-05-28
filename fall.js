@@ -8,7 +8,6 @@ const peanuts = [];
 const peanutImg = new Image();
 peanutImg.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Peanut_%28kernel%29.jpg/120px-Peanut_%28kernel%29.jpg";
 
-// Fonction pour créer une nouvelle cacahuète
 function createPeanut() {
   peanuts.push({
     x: Math.random() * canvas.width,
@@ -18,7 +17,6 @@ function createPeanut() {
   });
 }
 
-// Animation des cacahuètes
 function animate() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   for (let p of peanuts) {
@@ -26,7 +24,6 @@ function animate() {
     ctx.drawImage(peanutImg, p.x, p.y, p.size, p.size);
   }
 
-  // Retirer les cacahuètes tombées hors de l'écran
   for (let i = peanuts.length - 1; i >= 0; i--) {
     if (peanuts[i].y > canvas.height) {
       peanuts.splice(i, 1);
@@ -36,11 +33,9 @@ function animate() {
   requestAnimationFrame(animate);
 }
 
-// Lancer l'effet
 setInterval(createPeanut, 300);
 animate();
 
-// Adapter à la taille de l'écran si on redimensionne
 window.addEventListener("resize", () => {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
