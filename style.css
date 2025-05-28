@@ -1,0 +1,79 @@
+/* STYLE GLOBAL */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fff8e1;
+  color: #333;
+}
+
+/* EN-TÊTE */
+header {
+  background: #d17b0f;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+nav button {
+  margin: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* CONTENU PRINCIPAL */
+main {
+  padding: 1rem;
+}
+
+/* GRILLE DES TYPES DE CACAHUÈTES */
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  padding: 1rem;
+  max-width: 200px;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+/* MASCOTTE */
+.mascotte {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  background: #f5e1bc;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.mascotte img {
+  width: 150px;
+  height: auto;
+}
+
+/* CANVAS POUR L’ANIMATION DES CACAHUÈTES */
+canvas#fallingPeanuts {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 1000;
+}
